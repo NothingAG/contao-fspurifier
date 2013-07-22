@@ -74,15 +74,19 @@ class FSPurifier extends \Backend {
      * Validates the input of new folder- and filenames
      * Allowed symbols are a-z, A-Z, 0-9, _ and .
      *
-     * @param $filename     - The input name
+     * @param $objWidget    - The input name
+     * @param $formId       - The Form field
      * @return mixed        - The new updated name
      */
-    public function validateInput($filename) {
-        $result = preg_replace(self::white_list, '_', $filename);
-        // Inform user
-        if ($filename != $result) {
-            \Message::addNew(sprintf($GLOBALS['TL_LANG']['MSC']['warningOnFileRename'], $filename, $result));
+    public function validateInput(Widget $objWidget, $formId) {
+        if ($formId instanceof DC_Folder) {
+            $result = preg_replace(self::white_list, '_', $objWidget);
+            // Inform user
+            if ($objWidget != $result) {
+                \Message::addNew(sprintf($GLOBALS['TL_LANG']['MSC']['warningOnFileRename'], $objWidget, $result));
+            }
+            return $result;
         }
-        return $result;
+        return $objWidget;
     }
 }
