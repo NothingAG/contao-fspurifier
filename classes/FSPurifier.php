@@ -47,11 +47,11 @@ class FSPurifier extends \Backend {
      * unreserved: upper and lower case letters, decimal digits and
      * "-" | "_" | "." | "!" | "~" | "*" | "'" | "(" | ")"
      */
-    const white_list = '/[^a-zA-Z0-9-_\.\!\~\*\'\(\)]/';
+    const WHITE_LIST = '/[^a-zA-Z0-9-_\.\!\~\*\'\(\)]/';
 
     /**
      * Validates the input of uploaded files names
-     * Allowed symbols are a-z, A-Z, 0-9, _ and .
+     * Allowed symbols can be found in WHITE_LIST
      *
      * @param $files     - The upload name
      * */
@@ -59,12 +59,12 @@ class FSPurifier extends \Backend {
         foreach($files as $path) {
             if (file_exists(TL_ROOT . '/' . $path)) {
                 // Remove unwanted Symbols from the filename
-                $fileName = preg_replace(self::white_list, '_', basename($path));
+                $fileName = preg_replace(self::WHITE_LIST, '_', basename($path));
                 //Rename the file
                 if (basename($path) != $fileName) {
                     rename(TL_ROOT . '/' . $path, TL_ROOT . '/' . dirname($path) . '/' . $fileName);
                     // Inform user
-                    \Message::addNew(sprintf($GLOBALS['TL_LANG']['MSC']['warningOnFileUpload'], basename($path),$fileName));
+                    \Message::addNew(sprintf($GLOBALS['TL_LANG']['MSC']['fs_warningOnFileUpload'], basename($path), $fileName));
                 }
             }
         }
@@ -72,7 +72,7 @@ class FSPurifier extends \Backend {
 
     /**
      * Validates the input of new folder- and filenames
-     * Allowed symbols are a-z, A-Z, 0-9, _ and .
+     * Allowed symbols can be found in WHITE_LIST
      *
      * @param $objWidget    - The input name
      * @param $formId       - The Form field
@@ -80,10 +80,10 @@ class FSPurifier extends \Backend {
      */
     public function validateInput(Widget $objWidget, $formId) {
         if ($formId instanceof DC_Folder) {
-            $result = preg_replace(self::white_list, '_', $objWidget);
+            $result = preg_replace(self::WHITE_LIST, '_', $objWidget);
             // Inform user
             if ($objWidget != $result) {
-                \Message::addNew(sprintf($GLOBALS['TL_LANG']['MSC']['warningOnFileRename'], $objWidget, $result));
+                \Message::addNew(sprintf($GLOBALS['TL_LANG']['MSC']['fs_warningOnFileRename'], $objWidget, $result));
             }
             return $result;
         }

@@ -29,7 +29,5 @@
 /**
  * Miscellaneous
  */
-$GLOBALS['TL_LANG']['MSC']['warningOnFileUpload']	= 'Leerzeichen und einige Sonderzeichen können Probleme verursachen wenn sie in Dateinamen verwendet werden. Versuchen Sie diese zu vermeiden oder mit _ zu ersetzen.
-                                                        Die Datei wurde automatisch von "%s" auf "%s" umbenannt.';
-$GLOBALS['TL_LANG']['MSC']['warningOnFileRename']	= 'Leerzeichen und einige Sonderzeichen können Probleme verursachen wenn sie in Datei- oder Ordnernamen verwendet werden. Versuchen Sie diese zu vermeiden oder mit _ zu ersetzen.
-                                                        Der Name wurde automatisch von "%s" auf "%s" geändert.';
+$GLOBALS['TL_LANG']['MSC']['fs_warningOnFileUpload']	= 'Leerzeichen und einige Sonderzeichen können Probleme verursachen wenn sie in Dateinamen verwendet werden. Versuchen Sie diese zu vermeiden oder mit _ zu ersetzen. Die Datei wurde automatisch von "%s" auf "%s" umbenannt.';
+$GLOBALS['TL_LANG']['MSC']['fs_warningOnFileRename']	= 'Leerzeichen und einige Sonderzeichen können Probleme verursachen wenn sie in Datei- oder Ordnernamen verwendet werden. Versuchen Sie diese zu vermeiden oder mit _ zu ersetzen. Der Name wurde automatisch von "%s" auf "%s" geändert.';

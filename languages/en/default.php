@@ -29,7 +29,5 @@
 /**
  * Miscellaneous
  */
-$GLOBALS['TL_LANG']['MSC']['warningOnFileUpload']	= 'Some special characters (including spaces) in file names can cause issues on the web, it is recommended to avoid or replace them with _.
-                                                        The file was automatically renamed from "%s" to "%s" to avoid any problems.';
-$GLOBALS['TL_LANG']['MSC']['warningOnFileRename']	= 'Some special characters (including spaces) in file or folder names can cause issues, it is recommended to avoid or replace them with _.
-                                                        The name was automatically changed from "%s" to "%s" to avoid any problems.';
+$GLOBALS['TL_LANG']['MSC']['fs_warningOnFileUpload']	= 'Some special characters (including spaces) in file names can cause issues on the web, it is recommended to avoid or replace them with _. The file was automatically renamed from "%s" to "%s" to avoid any problems.';
+$GLOBALS['TL_LANG']['MSC']['fs_warningOnFileRename']	= 'Some special characters (including spaces) in file or folder names can cause issues, it is recommended to avoid or replace them with _. The name was automatically changed from "%s" to "%s" to avoid any problems.';
