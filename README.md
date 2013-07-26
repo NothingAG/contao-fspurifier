@@ -13,12 +13,20 @@ The character-whitelist is based on RFC2396 URI standards and excludes all reser
 
 ## VERSION HISTORY
 
-### 1.0.0 (2012-10-03)
+### 1.1.0 (2013-07-26)
+* Updated documentation
+* Improvements of language strings to avoid collision
+* Updated language texts
+
+### 1.0.1 (2013-07-22)
+*  Added a rather important restriction to prevent the module from interfering with other forms.
+
+### 1.0.0 (2013-07-10)
  * Initial release
 
 ## LICENSE
 * Author:		Nothing Interactive, Switzerland
 * Website: 		[https://www.nothing.ch/](https://www.nothing.ch/)
-* Version: 		1.0.0
-* Date: 		2013-07-04
+* Version: 		1.1.0
+* Date: 		2013-07-26
 * License: 		[GNU Lesser General Public License (LGPL)](http://www.gnu.org/licenses/lgpl.html)
