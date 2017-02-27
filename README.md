@@ -1,3 +1,6 @@
+# [UNMAINTAINED]
+This project is not maintained anymore.
+
 # CONTAO EXTENSION: FILESYSTEM PURIFIER (fs_purifier)
 This extension removes specific chars from the names of user-uploaded files, created folders or renamed folders & files.
 The character-whitelist is based on RFC2396 URI standards and excludes all reserved, excluded & unwise characters.
